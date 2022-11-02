@@ -11,8 +11,8 @@
     "constructorArg": "build/bin.js"
   },
   "scripts": {
-    "prepare": "tsc",
-    "build": "tsc",
+    "prepare": "tsc -d",
+    "build": "tsc -d",
     "start": "ts-node src/index.ts"
   },
   "keywords": [],
