@@ -1,20 +1,11 @@
 require("dotenv").config();
 
-const {
-    CONSTRUCTOR_DETECTOR_ENDPOINT,
-    CONSTRUCTOR_DETECTOR_ENDPOINT_URL,
-    WEB3_RPC_ENDPOINT,
-    WEB3_RPC_ENDPOINT_URL,
-    RPC_ENDPOINT,
-    RPC_ENDPOINT_URL,
-    ETHEREUM_RPC_ENDPOINT,
-    ETHEREUM_RPC_ENDPOINT_URL,
-} = process.env;
-
 const base = [
     'CONSTRUCTOR_DETECTOR_ENDPOINT',
-    'WEB3_RPC_ENDPOINT',
-    'RPC_ENDPOINT'
+    'ENDPOINT',
+    'CONSTRUCTOR',
+    'CONSTRUCTOR_ENDPOINT',
+    'WEB3_ENDPOINT',
 ];
 
 const keysUrl = (keys: string[]) => {
