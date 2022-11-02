@@ -90,3 +90,23 @@ detector.parse({
 ]
 */
 ```
+
+To resolve the issue, we need data from tx.input and the actual smart contract code. You can extract this data yourself
+```js
+const detector = require('constructor-argument-detector');
+const ethers = require('ethers');
+const provider = new ethers.providers.JsonRpcProvider("https://bsc-dataseed1.binance.org/");
+
+provider.getTransaction('0xc0e636dcebeeed30525f1ca2214b93331fe2263adc87cd467d57d4ff04257d4d').then(async (tx) => {
+    const data = tx.data;
+    const addressOfContract = '0x45c54210128a065de780C4B0Df3d16664f7f859e';
+    const byteCode = await provider.getCode(addressOfContract);
+    
+    const result = detector.offchainParse({
+        txData: data,
+        byteCode,
+        types: ["address", "address", "address", "address", "address", "uint"]
+    })
+    console.log(result);
+})
+```
