@@ -1,4 +1,5 @@
 import { Command } from "commander";
+import CommandAction from "./CommandAction";
 import defaultEndpoint from "./defaultEndpoint";
 import main from "./main";
 
@@ -10,6 +11,6 @@ program
   .requiredOption('-e, --endpoint <url>', 'RPC endpoint url', defaultEndpoint)
   .requiredOption('-t, --types <url>', 'Constructor types (Example: uint,string,address)', )
   .argument('<hash>', 'Tx of creating transactions')
-  .action(main)
+  .action(CommandAction)
 
 program.parse();

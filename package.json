@@ -1,7 +1,7 @@
 {
   "name": "constructor-argument-detector",
   "description": "",
-  "main": "main.js",
+  "main": "build/export.js",
   "bin": {
     "constructor-detector": "build/bin.js",
     "constructor-argument-detector": "build/bin.js",
