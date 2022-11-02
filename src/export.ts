@@ -1,7 +1,8 @@
-import main from "./main";
 import offchainParse from "./offchainParse";
+import parse from "./parse";
 
-export default {
-    parse: main,
+export {
+    parse,
     offchainParse
 }
+export default parse;

@@ -2,7 +2,7 @@ import { getContractAddress } from "@ethersproject/address";
 import { ethers } from "ethers";
 import offchainParse from "./offchainParse";
 
-async function main({txHash, endpoint, types}: {
+async function parse({txHash, endpoint, types}: {
     txHash: string,
     endpoint: string,
     types: string[]
@@ -18,4 +18,4 @@ async function main({txHash, endpoint, types}: {
     });
 }
 
-export default main;
+export default parse;

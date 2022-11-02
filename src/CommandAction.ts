@@ -1,4 +1,4 @@
-import main from "./main";
+import parse from "./parse";
 
 type CommandOpts = {
     endpoint: string,
@@ -7,7 +7,7 @@ type CommandOpts = {
 
 const CommandAction = async (txHash: string, { endpoint, types }: CommandOpts) => {
     const typesArr = types.split(",").map(type => type.replace(/\s/g, ''));
-    (await main({
+    (await parse({
         txHash,
         endpoint,
         types: typesArr

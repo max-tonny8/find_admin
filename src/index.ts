@@ -1,7 +1,7 @@
 import { Command } from "commander";
 import CommandAction from "./CommandAction";
 import defaultEndpoint from "./defaultEndpoint";
-import main from "./main";
+import main from "./parse";
 
 const program = new Command();
 
