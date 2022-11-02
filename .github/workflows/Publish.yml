@@ -1,0 +1,29 @@
+name: Publish Package to npm
+on:
+  push:
+    tags:
+      - '*.*.*'
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      # Setup .npmrc file to publish to npm
+      - uses: actions/setup-node@v3
+        with:
+          always-auth: true
+          node-version: '14.x'
+          registry-url: 'https://registry.npmjs.org'
+      - name: Get tag
+        id: tag
+        uses: dawidd6/action-get-tag@v1
+        with:
+          strip_v: true
+      - run: git config --global user.email "const.subject@gmail.com" && git config --global user.name "Automation"
+      - run: npm version ${{steps.tag.outputs.tag}}
+      - run: npm install --frozen-lockfile
+      - run: npm run build 
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

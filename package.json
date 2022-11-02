@@ -1,8 +1,12 @@
 {
   "name": "constructor-argument-detector",
-  "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "bin": {
+    "construct-detector": "build/index.js",
+    "constructor-argument-detector": "build/index.js",
+    "constructor": "build/index.js"
+  },
   "scripts": {
     "prepare": "tsc",
     "build": "tsc",
