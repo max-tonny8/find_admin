@@ -3,9 +3,12 @@
   "description": "",
   "main": "main.js",
   "bin": {
-    "construct-detector": "build/bin.js",
+    "constructor-detector": "build/bin.js",
     "constructor-argument-detector": "build/bin.js",
-    "constructor": "build/bin.js"
+    "constructor-argument": "build/bin.js",
+    "constructor": "build/bin.js",
+    "constructorArgument": "build/bin.js",
+    "constructorArg": "build/bin.js"
   },
   "scripts": {
     "prepare": "tsc",
