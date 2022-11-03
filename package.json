@@ -15,7 +15,23 @@
     "build": "tsc -d",
     "start": "ts-node src/index.ts"
   },
-  "keywords": [],
+  "keywords": [
+    "parser",
+    "typescript",
+    "parser-library",
+    "ethers",
+    "ethereum",
+    "smart-contracts",
+    "contracts",
+    "blockchain",
+    "arguments",
+    "constructor",
+    "bsc",
+    "web3",
+    "web3js",
+    "ethers",
+    "ethersjs"
+  ],
   "author": "",
   "license": "ISC",
   "husky": {
